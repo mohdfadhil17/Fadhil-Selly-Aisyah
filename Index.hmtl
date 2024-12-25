@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Aliran Fluida</title>
+    <!-- Menautkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Duplikasi Aliran Fluida</h1>
+        <p>Menggambarkan aliran fluida dalam pipa</p>
+    </header>
+    <main>
+        <form id="simulation-form">
+            <div class="form-group">
+                <label for="velocity">Kecepatan Fluida (m/s):</label>
+                <input type="number" id="velocity" step="0.1" value="1.0" required>
+            </div>
+            <div class="form-group">
+                <label for="viscosity">Viskositas Fluida (Pa.s):</label>
+                <input type="number" id="viscosity" step="0.001" value="0.001" required>
+            </div>
+            <div class="form-group">
+                <label for="diameter">Diameter Pipa (m):</label>
+                <input type="number" id="diameter" step="0.01" value="0.1" required>
+            </div>
+            <button type="button" class="button" onclick="simulateFlow()">Simulasikan Aliran</button>
+        </form>
+        <canvas id="flowCanvas" width="800" height="400"></canvas>
+        <div class="explanation" id="explanation" style="display: none;"></div>
+        <div id="history">
+            <h3>Riwayat Simulasi</h3>
+            <ul id="history-list"></ul>
+        </div>
+    </main>
+    <!-- Menautkan file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
